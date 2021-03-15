@@ -178,8 +178,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-	/*add your code here*/
+function miles(km) {
+	return km * 0.621371;
 }
 
 //Task 5b - Feet to CM
@@ -190,8 +190,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-	/*add your code here*/
+function feet(cm) {
+	return cm / 30.48;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -204,8 +204,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
-	/*add your code here*/
+function annoyingSong(number) {
+	while (number > 0) {
+		return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${
+			number - 1
+		} bottles of soda on the wall`;
+		number--;
+	}
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -223,8 +228,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
 
-function grade(/*Your Code here */) {
-	/*Your Code here */
+function grade(score) {
+	if (score >= 90) {
+		return 'you got an A';
+	} else if (score >= 80) {
+		return 'you got a B';
+	} else if (score >= 70) {
+		return 'you got a C';
+	} else if (score >= 60) {
+		return 'you got a D';
+	} else {
+		return 'you got an F';
+	}
 }
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -239,8 +254,14 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-function vowelCounter(/*add your code here*/) {
-	/*add your code here*/
+function vowelCounter(str) {
+	let count = 0;
+	let vowels = 'aeiou';
+	let strArr = str.toUpperCase().split('');
+	for (let i = 0; i < strArr.length; i++) {
+		if (vowels.includes(strArr[i])) count++;
+	}
+	return count;
 }
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
