@@ -157,13 +157,16 @@ function game(user, computer) {
 	) {
 		return 'you win!';
 	} else if (
-		(user == 'rock' && computer == 'paper') ||
-		(user == 'paper' && computer == 'scissors') ||
-		(user == 'scissors' && computer == 'rock')
+		user === computer
+		// (user == 'rock' && computer == 'paper') ||
+		// (user == 'paper' && computer == 'scissors') ||
+		// (user == 'scissors' && computer == 'rock')
 	) {
-		return 'you lose!';
-	} else {
 		return "it's a tie";
+		// return 'you lose!';
+	} else {
+		// return "it's a tie";
+		return 'you lose!';
 	}
 }
 
